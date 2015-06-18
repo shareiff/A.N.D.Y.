@@ -1,3 +1,59 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<header>
+  <h3 id="logo">A.N.D.Y.</h3>
 
-{{outlet}}
+  <div id="searchBar">
+    <span><img src="/images/magnifier_white.png"/></span>
+    {{input type="text" placeholder="Search" autofocus="true" value=filterText on="key-press"}}
+  </div>
+
+  <nav>
+    <ul>
+      <li><img src="/images/list_white.png"/></li>
+      <li><img src="/images/users_white.png"/></li>
+    </ul>
+  </nav>
+
+</header>
+
+<div class="spacer"></div>
+<ul>
+    {{#each item in filteredResults}}
+      <li>{{item}}</li>
+    {{/each}}
+  </ul>
+  <!-- <div class="container"> -->
+<!--can set class on/off with helper bound to on/off property of computer class  -->
+<div class="computer on">
+  <img src="/images/screen_white.png"/>
+  <p class="computer-name">CC2-187-PODIUM </p><p class="user-name"> EMP\SHA-SEDENFIELDdddddd</p>
+</div>
+<div class="computer off">
+  <img src="/images/screen_white.png"/>
+  <p class="computer-name">CC2-187-PODIUM </p><p class="user-name"><i>Last online 5 hours ago</i></p>
+</div>
+<div class="computer off">
+  <img src="/images/screen_white.png"/>
+  <p class="computer-name">LBA-221-106 </p><p class="user-name"><i>Last online unknown</i></p>
+</div>
+<div class="computer on">
+  <img src="/images/screen_white.png"/>
+  <p class="computer-name">CC2-187-101 </p>
+</div>
+
+<div class="row computer on">
+  <div class="one-half column">
+    <img src="/images/screen_white.png"/>
+    <p class="computer-name">CC2-187-PODIUM </p>
+  </div>
+  <div class="one-half column user-name">EMP\SHA-SEDENFIELDdd</div>
+</div>
+<!-- </div> -->
+
+<section>
+  {{outlet}}
+</section>
+
+
+<!-- $.get('listOfComputers.txt', function(data) {
+          console.log(data);
+      }); -->

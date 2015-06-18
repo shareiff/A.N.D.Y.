@@ -1,0 +1,45 @@
+.computer {
+  max-width: 400px;
+  height: auto;
+  padding: 15px;
+  margin: 10px 10px 10px 20px;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  border-radius: 2px;
+  color: #666;
+  text-align: center;
+
+  .line {
+    padding: 2px;
+    color: #fff;
+  }
+
+  img {
+    display: inline;
+    height: 15px;
+  }
+
+  p {
+    display: inline;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.user-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+.on {
+  background-color: #69F0AE;
+}
+.off {
+  background-color: #BDBDBD;
+}
+
+@media (max-width: 550px) {
+  .computer {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
